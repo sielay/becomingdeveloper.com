@@ -2,8 +2,8 @@
   <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex flex-wrap" role="alert">
     <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3 mb-2 lg:mb-0">Mind Cookies?</span>
     <span class="font-semibold mr-2 text-left flex-auto mb-2 lg:mb-0">I need them for Disqus comments and Google Analytics.</span>
-    <button id="enable-cookies" class="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">Enable</span>
-    <button id="disable-cookies" class="flex rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold mr-3">Block</span>
+    <button id="enable-cookies" class="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">OK</span>
+    <button id="disable-cookies" class="flex rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold mr-3">Leave</span>
   </div>
 </div>
 <script>
@@ -29,33 +29,32 @@
         document.location.reload(true);
       });
       disable.addEventListener('click', function() {        
-        consent.style.display = 'none';
-        setCookie('CookieConsent', 'false');
+        document.location.href = 'https://google.com';
       });
     } else {
       document.cookieConsent = cookie[3] === 'true';
+    }
 
-      // GA
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EEVDEP71P8');
+    // GA
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EEVDEP71P8');
 
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EEVDEP71P8';
+    (d.head || d.body).appendChild(s);
+    })();
+
+    if (document.getElementById('disqus_thread')) {
+      // Disqus
       (function() {
       var d = document, s = d.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EEVDEP71P8';
+      s.src = 'https://becoming-a-software-developer.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
       })();
-
-      if (document.getElementById('disqus_thread')) {
-        // Disqus
-        (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://becoming-a-software-developer.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-      }
     }
   });
 </script>
