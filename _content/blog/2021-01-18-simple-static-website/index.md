@@ -18,7 +18,7 @@ tags:
     - netlify
     - tailwindcss
 categories:
-    - recipe
+    - Recipe
 draft: false
 ---
 

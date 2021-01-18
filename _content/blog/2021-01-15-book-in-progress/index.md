@@ -6,7 +6,7 @@ author: sielay
 tags: 
     - book
 categories:
-    - progress
+    - Progress
 draft: false
 ---
 
