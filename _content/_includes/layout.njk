@@ -66,14 +66,12 @@
     </head>
     <body class="bg-gray-100 leading-normal tracking-normal relative font-sans">
         {% include './navigation.njk' %}
-        {% include './consent.njk' %}
-        
+        {% include './consent.njk' %}        
         {% if fullwidth %}
         <div class="container w-full md:max-w-3xl xl:max-w-full xl:px-12 mx-auto">
         {% else %}
         <div class="container w-full md:max-w-3xl mx-auto">
         {% endif %}
-            {{ page.renderData | keys | dump }}
             {% block inner %}{{content | safe}}{% endblock %}
             {% block rest %}{% endblock %}
         </div>

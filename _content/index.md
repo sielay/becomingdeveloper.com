@@ -1,6 +1,7 @@
 ---
 title: Becoming a Software Developer - A prequel to learn-to-code books in a rapidly changing world
 topNav: false
+image: cover.jpg
 ---
 {%- include 'hero.njk' -%}
 {%- include 'subscribe.njk' -%}
