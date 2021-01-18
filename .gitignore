@@ -1,0 +1,6 @@
+node_modules
+_content/icons
+drafts
+.DS_Store
+.functions-build
+_site

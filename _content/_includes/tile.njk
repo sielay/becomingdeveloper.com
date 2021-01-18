@@ -1,0 +1,26 @@
+{% extends 'card.njk' %}
+
+{% block content %}
+{% include 'ribbon.njk' %}
+<h2 class="text-gray-900 font-bold text-xl mb-2 mt-2">
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+</h2>
+{% if post.data.image %}
+<img class="w-full" src="{{ post.url }}{{ post.data.image }}"/>
+{% endif %}
+<div class="text-gray-700 text-base limited hide-review"><a href="{{ post.url }}" title="{{ post.data.title }}">{% excerpt post %}… read more…</a></div>
+{% endblock %}
+
+{% block rest %}
+<div class="mb-8 limited limited-low">
+{%- for tag in post.data.tags -%}
+<a class="inline-block bg-gray-200 rounded-full px-2 py-1 text-gray-800 mr-2 mb-1 text-xs" title="Tag - {{ tag }}" href="/blog/tag/{{ tag | blog_slug }}">#{{ tag }}</a>
+{%- endfor -%}
+</div>
+<div class="flex items-center">
+<div class="text-sm">
+<p class="text-gray-900 leading-none"></p>
+<p class="text-gray-800">{{ post | readingTime }} min read - {{ post.date | blog_dateformat('LL') }}</p>
+</div>
+</div>
+{% endblock %}

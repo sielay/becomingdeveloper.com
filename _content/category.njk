@@ -1,0 +1,11 @@
+---
+pagination:
+  data: collections.category
+  size: 1
+  alias: postslist
+eleventyComputed: 
+  title: "Blog category: {{ postslist.title }}"
+permalink: "{{ postslist.slug }}/index.html"
+---
+
+{%- include 'postslist.njk' -%}

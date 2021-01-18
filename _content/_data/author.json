@@ -1,0 +1,25 @@
+{
+    "name": "Łukasz Marek Sielski",
+    "email": "sielay@sielay.com",
+    "avatar": "/img/aa-headshot.jpg",
+    "website": {
+        "name": "Łukasz Marek Sielski",
+        "url": "https://www.sielay.com"
+    },
+    "twitter": {
+        "name": "@sielay",
+        "url": "https://twitter.com/sielay"
+    },
+    "linkedin": {
+        "name": "Łukasz Sielski",
+        "url": "https://uk.linkedin.com/in/sielay"
+    },
+    "instagram": {
+        "name": "@sielay",
+        "url": "https://instagram.com/sielay"
+    },
+    "github": {
+        "name": "sielay",
+        "url": "https://github.com/sielay"
+    }
+}

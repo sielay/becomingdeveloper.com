@@ -1,0 +1,35 @@
+{% extends 'intro.njk' %}
+
+{% block introtitle %}
+Subscribe to the Newsletter
+{% endblock %}
+
+{% block introbody %}
+
+  <form method="POST" name="submitter" data-netlify="true" netlify-honeypot="bot-field" action="/subscribed">
+    <input type="hidden" name="form-name" value="submitter"/>
+    <div class="hidden" aria-hidden="true">
+      <label>
+      Don’t fill this out if you're human: 
+      <input name="bot-field"/>
+      </label>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full px-3 mb-6 md:mb-0">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">E-mail address</label>
+        <div class="flex">
+          <input id="email" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="email" type="email">
+          <div class="ml-1">
+            <button class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div data-netlify-recaptcha="true"></div>
+  </form>
+  <p>
+    I will send information about the book and new materials. I won't sell the addresses to the third party nor send each update to this blog.
+  </p>
+{% endblock %}

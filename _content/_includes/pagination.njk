@@ -1,0 +1,10 @@
+<div class="w-full lg:max-w-full lg:flex mb-2 mt-2">
+    <div class="w-full flex flex-col justify-between leading-normal">
+        <div class="text-center">
+            <a class="inline-block rounded-full px-3 py-1 text-gray-800 mr-2 mb-1 text-sm shadow-lg bg-white" title="second" href="{{ postslist.slugs.first}}">First</a>
+            {% if postslist.slugs.previous %}<a class="inline-block rounded-full px-3 py-1 text-gray-800 mr-2 mb-1 text-sm shadow-lg bg-white" title="second" href="{{ postslist.slugs.previous }}">Previous</a>{% endif %}
+            {% if postslist.slugs.next %}<a class="inline-block rounded-full px-3 py-1 text-gray-800 mr-2 mb-1 text-sm shadow-lg bg-white" title="second" href="{{ postslist.slugs.next }}">Next</a>{% endif %}
+            {% if postslist.slugs.last %}<a class="inline-block rounded-full px-3 py-1 text-gray-800 mr-2 mb-1 text-sm shadow-lg bg-white" title="second" href="{{ postslist.slugs.last }}">Last</a>{% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+
+{% extends 'layout.njk' %}
+
+{% block inner %}
+<div class="w-full lg:max-w-full lg:flex shadow-lg mb-5">
+    <div class="w-full bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal mb-8">
+        <h2 class="text-gray-900 font-bold text-2xl mb-4">
+            <a href="">{{ title }}</a>
+        </h2>
+        <div class="leading-loose blog">
+            {{ content | safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}

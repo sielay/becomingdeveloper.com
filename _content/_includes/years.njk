@@ -1,0 +1,10 @@
+{% extends 'card.njk' %}
+
+{% block content %}
+<h3 class="font-xl mb-4">Years</h3>
+{%- for date in collections.calendar -%}
+    {%- if date.type == 'year' -%}
+        <a class="inline-block hover:bg-gray-200 rounded-lg px-1 py-1 text-gray-800 mr-1 mb-1 text-xs" title="Archive year: {{ date.title }}" href="/blog/{{ date.slug }}">{{ date.title }} ({{ date.count }})</a>
+    {%- endif -%}
+{%- endfor -%}
+{% endblock %}

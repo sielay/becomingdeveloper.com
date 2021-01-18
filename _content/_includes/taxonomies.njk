@@ -1,0 +1,17 @@
+{% extends 'card.njk' %}
+
+{% block content %}
+<p class="text-sm text-gray-800 flex items-center"></p>
+<pre>
+</pre>
+<div class="text-gray-900 font-bold text-xl mb-2">
+    {{ taxonomy.title }}
+</div>
+<ul>
+{%- for group in taxonomy.items -%}
+  <li>
+    <a href="blog/{{ group.url }}">{{ group.title }} ({{ group.pages.length }})</a>
+  </li>
+{%- endfor -%}
+</ul>
+{% endblock %}

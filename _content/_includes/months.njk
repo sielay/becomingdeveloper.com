@@ -1,0 +1,9 @@
+{% import 'months-macro.njk' as months %}
+
+<div class="flex flex-wrap">
+{%- for date in collections.calendar | reverse -%}
+    {%- if date.type == 'year' -%}    
+        {{ months.r(date, collections.calendar) }}
+    {%- endif -%}
+{%- endfor -%}
+</div>

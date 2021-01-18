@@ -1,0 +1,13 @@
+---
+pagination:
+  data: collections.tag_list
+  size: 1
+  alias: taxonomy
+permalink: "{{ taxonomy.slug }}/index.html"
+---
+<ul>
+{% for url in collections | collections_flat | safejson_each("url") %}
+    <li>{{ url}}</li>
+{% endfor %}
+</ul>
+{% include 'taxonomies.njk' %}

@@ -1,0 +1,10 @@
+---
+pagination:
+  data: collections.calendar
+  size: 1
+  alias: postslist
+permalink: "{{ postslist.slug }}/index.html"
+---
+
+<h2 class="text-4xl">Archive: {{ postslist.title }}</h2>
+{%- include 'postslist.njk' -%}

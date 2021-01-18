@@ -1,0 +1,3 @@
+{%- for category in post.data.categories -%}
+<a href="/blog/category/{{ category | slug }}" title="{{category}}">{{ category }} </a>
+{%- endfor -%}

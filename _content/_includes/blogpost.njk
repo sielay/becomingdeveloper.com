@@ -1,0 +1,68 @@
+
+{% extends 'layout.njk' %}
+
+{% block inner %}
+
+{% for tag in tags %}
+    {% if tag === "unlearn" %}
+        {% include 'unlearn.njk' %}
+    {% endif %}
+{% endfor %}
+
+
+<div class="w-full lg:max-w-full lg:flex shadow-lg mb-5">
+    
+
+    <div class="w-full bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal mb-8">
+
+        {%- for category in categories -%}
+            <a href="/blog/category/{{ category | slug }}" title="{{category}}">{{ category }} </a>
+        {%- endfor -%}
+
+
+        <h2 class="text-gray-900 font-bold text-2xl mb-4 mt-2">
+            <a href="">{{ title }}</a>
+        </h2>
+        <div class="flex items-center">
+            <div class="text-sm">
+                <p class="text-gray-900 leading-none"></p>
+                <p class="text-gray-800">{{ content | readingTime }} min read - {{ date | blog_dateformat('LL') }}</p>
+            </div>
+        </div>
+        <div class="mb-8">
+            {%- for tag in tags -%}
+                <a class="inline-block bg-gray-200 rounded-full px-2 py-1 text-gray-800 mr-2 mb-1 text-xs" title="second" href="/blog/tag/{{ tag }}">#{{ tag }}</a>
+            {%- endfor -%}
+        </div>              
+        <div class="leading-loose blog">
+            {{ content | safe }}
+        </div>
+    </div>
+    <div class="mb-8"></div>
+    <div class="flex items-center">
+        <div class="text-sm">
+            <p class="text-gray-900 leading-none"></p>
+            <p class="text-gray-800"></p>
+        </div>
+    </div>
+</div>
+
+{% include 'disqus.njk' %}
+
+<div class="flex mb-4">
+  <div class="w-1/2 h-12 mr-3">
+    <h3 class="text-gray-900 font-bold text-l mb-2">Next article</h3>
+{%- set post = siblings.previous -%}
+{%- if post -%}
+{%- include 'tile.njk' -%}
+{%- endif -%}
+  </div>
+  <div class="w-1/2 h-12 ml-3">
+    <h3 class="text-gray-900 font-bold text-l mb-2">Previous article</h3>
+{%- set post = siblings.next -%}
+{%- if post -%}
+{%- include 'tile.njk' -%}
+{%- endif -%}  
+  </div>
+</div>
+{% endblock %}

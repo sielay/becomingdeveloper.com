@@ -1,0 +1,11 @@
+<div class="w-full lg:max-w-full lg:flex shadow-lg mb-5">
+    <div class="bg-white w-full rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div class="mb-8">
+            <h3 class="font-xl mb-4">Tags</h3>
+            {%- for tag in collections.tag | blog_first -%}
+                <a class="inline-block hover:bg-gray-200 rounded-lg px-1 py-1 text-gray-800 mr-1 mb-1 text-xs" title="Tag: {{ tag.title }}" href="{{ tag.slug }}">#{{ tag.title }}</a>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+

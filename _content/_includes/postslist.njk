@@ -1,0 +1,12 @@
+{% include 'pagination.njk' %}
+
+<ul>
+{%- for post in postslist.items -%}
+  <li>
+    {%- include 'tile.njk' -%}
+  </li>
+{%- endfor -%}
+</ul>
+
+{% include 'pagination.njk' %}
+

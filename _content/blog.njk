@@ -1,0 +1,10 @@
+---
+title: Blog
+pagination:
+  data: collections.blog
+  size: 1
+  alias: postslist
+topNav: postslist.pagenumber == 0
+permalink: "{{ postslist.slug }}/index.html"
+---
+{%- include 'postslist.njk' -%}

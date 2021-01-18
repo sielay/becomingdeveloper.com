@@ -1,0 +1,11 @@
+{% extends 'card.njk' %}
+
+{% block content %}
+  <ul class="text-sm" style="height: 10rem">
+    {%- for post in category | blog_top(5)  -%}
+    <li>
+      <a href="{{ post.url }}">&bullet; {{ post.data.title }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+{% endblock %}
