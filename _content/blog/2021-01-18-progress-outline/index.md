@@ -6,7 +6,7 @@ tags:
  - outline
 categories: 
  - "Progress"
-
+draft: true
 ---
 
 As I slowly move forward I stabilised the outline and got about 2/5 of the text done. More and more I get into content I understand

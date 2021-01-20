@@ -19,7 +19,7 @@ tags:
     - tailwindcss
 categories:
     - Recipe
-draft: false
+draft: true
 ---
 
 A static website is the oldest (yet still relevant) form of content on the internet. In a simplified way, it means that all you see in the browser has been "baked" as you see it and there is no machine needed to produce it. In other words, you see the same thing as anyone else does.

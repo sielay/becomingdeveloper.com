@@ -13,7 +13,7 @@ tags:
  - angular
 categories: 
  - "Kickstart"
-
+draft: true
 ---
 
 Skills and technologies required for each career path change very fast. Below I list the most up to date basics related to getting job as a web developer.
