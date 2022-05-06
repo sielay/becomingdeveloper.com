@@ -256,7 +256,7 @@ module.exports = {
           '"Noto Color Emoji"',
         ],
         serif: [
-          "Montserrat",
+          "ui-serif",
           "Georgia",
           "Cambria",
           '"Times New Roman"',
