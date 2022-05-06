@@ -6,7 +6,7 @@
 
 [build.environment]
     NODE_VERSION = "14.19.2"
-    YARN_VERSION = "1.22.8"
+    YARN_VERSION = "1.22.18"
 
 [[headers]]
     for = "/*"
