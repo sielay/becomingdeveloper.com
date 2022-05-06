@@ -5,8 +5,8 @@
     NODE_ENV = "8.11.3"
 
 [build.environment]
-    NODE_VERSION = "10"
-    YARN_VERSION = "1.21.1"
+    NODE_VERSION = "14.19.2"
+    YARN_VERSION = "1.22.8"
 
 [[headers]]
     for = "/*"
