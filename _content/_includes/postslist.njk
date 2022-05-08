@@ -1,5 +1,5 @@
 {% include 'pagination.njk' %}
-
+{% include 'categories.njk' %}
 <ul>
 {%- for post in postslist.items -%}
   <li>
@@ -7,6 +7,6 @@
   </li>
 {%- endfor -%}
 </ul>
-
+{% include 'tagcloud.njk' %}
 {% include 'pagination.njk' %}
 

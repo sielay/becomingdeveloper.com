@@ -46,7 +46,7 @@ module.exports = function (eleventyConfig) {
     blogPostTemplate: "blogpost.njk",
     itemsPerPage: 20,
     blogPaths: ["./_content/blog/**/*.md"],
-    defaultCategory: 'Private'
+    defaultCategory: 'learn'
   });
   blog.generateBooleanCollection(eleventyConfig, "topNav", "topNav", {
     all: ["./_content/*.md"],
