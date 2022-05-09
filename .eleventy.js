@@ -16,6 +16,8 @@ const shortcodes = require("./_content/_includes/shortcodes");
 const markdownIt = require("markdown-it");
 const { kebabCase } = require("lodash");
 const stripHtml = require("string-strip-html");
+const { defaults: anchor } = require("markdown-it-anchor");
+anchor.permalinkSymbol = '🔗';
 
 module.exports = function (eleventyConfig) {
   const markdownItOptions = {

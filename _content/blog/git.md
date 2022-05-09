@@ -34,6 +34,8 @@ tags:
 
 ## See
 
+ * Related
+    * [RSA](/blog/rsa) keys - you need them to authenticate with Git repositories
  * Providers
     * [GitHub](github.com)
     * [GitLab](gitlab.com)
@@ -43,4 +45,4 @@ tags:
     * [GitHub Desktop](https://desktop.github.com/)
     * [TortoiseGit](https://tortoisegit.org/)
     * [GitExtensions](https://gitextensions.github.io/)
-    * [GitKraken](https://www.gitkraken.com/)
+    * [GitKraken](https://www.gitkraken.com/) 
