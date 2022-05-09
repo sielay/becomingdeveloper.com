@@ -8,5 +8,6 @@ image: cover.png
 {%- include 'author.njk' -%}
 {%- include 'preface.njk' -%}
 {%- include 'facts.njk' -%}
+{%- include 'resources.njk' -%}
 <div className="w-full h-12"></div>
 </div>
