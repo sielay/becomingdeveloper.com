@@ -46,7 +46,7 @@
             {% jsonldUrl absolutePageUrl %}
             {% jsonldName pageTitle %}
             {% jsonldDescription pageDescription %}
-            {% if image %}{% jsonldImage pageImage %}{% endif %}
+            {% if image %}{% jsonldImage pageImage %}{% endif %},
             {% jsonldAuthor author.name %}
                 {% jsonldSameAs  author.website.url, author.twitter.url, author.linkedin.url, author.instagram.url, author.github.url %}
             {% endjsonldAuthor %}
