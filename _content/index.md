@@ -6,8 +6,6 @@ image: cover.png
 {%- include 'hero.njk' -%}
 {%- include 'subscribe.njk' -%}
 {%- include 'author.njk' -%}
-{%- include 'preface.njk' -%}
-{%- include 'facts.njk' -%}
 {%- include 'resources.njk' -%}
 <div className="w-full h-12"></div>
 </div>
