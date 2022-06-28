@@ -4,6 +4,7 @@
 <h2 class="text-gray-900 font-bold text-xl mt-2">
     <a href="{{ post.url }}">{{ post.data.title }}</a>
 </h2>
+<div class="text-gray-700 text-base limited hide-review">{% excerpt post %}… <a href="{{ post.url }}">read more…</a></div>
 {% endblock %}
 
 {% block rest %}
@@ -14,7 +15,7 @@
 </div>
 <div class="flex items-center">
 <div class="text-sm">
-<p class="text-gray-900 leading-none"></p>
+<p class="text-gray-600">{{ post | readingTime }} min read - {{ post.date | blog_dateformat('LL') }}</p>
 </div>
 </div>
 {% endblock %}

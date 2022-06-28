@@ -1,0 +1,17 @@
+{% extends 'card.njk' %}
+{% block content %}
+<ul class="list-disc pl-2 mb-2">
+{% set i = 0 %}
+{%- for post in collections.blog_flat -%}
+{% if post.data.categories.includes %}
+{% if post.data.categories.includes('journal') %}
+<li>
+<a href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
+</li>
+{% set i = i + 1 %}
+{% endif %}
+{% endif %}
+{%- endfor -%}
+</ul>
+<a href="/blog/category/journal" class="bg-orange-600 text-white block rounded-lg px-2 py-1">More...</a>
+{% endblock %}

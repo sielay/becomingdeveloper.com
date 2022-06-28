@@ -59,13 +59,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_content/**/*.jpg");
   eleventyConfig.addPassthroughCopy("_content/**/*.png");
   eleventyConfig.addPassthroughCopy("_content/**/*.svg");
+  eleventyConfig.addPassthroughCopy({ "node_modules/flag-icons/flags": "flags" });
   eleventyConfig.addFilter("data", (list, key) => {
     return key;
   });
 
   // filters
   eleventyConfig.addFilter("kebab", kebabCase);
-  eleventyConfig.addFilter("text_length", ({templateContent}) => {
+  eleventyConfig.addFilter("text_length", ({ templateContent }) => {
     return stripHtml(templateContent).length;
   });
   eleventyConfig.addFilter("safejson_each", (data, field) => {
@@ -91,11 +92,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("sort_by", (data, field) => {
     return Array.isArray(data)
       ? data.sort((a, b) => {
-          const A = a[field].replace(/[^a-zA-Z0-9]+/g, "");
-          const B = b[field].replace(/[^a-zA-Z0-9]+/g, "");
-          if (A === B) return 0;
-          return A > B ? 1 : -1;
-        })
+        const A = a[field].replace(/[^a-zA-Z0-9]+/g, "");
+        const B = b[field].replace(/[^a-zA-Z0-9]+/g, "");
+        if (A === B) return 0;
+        return A > B ? 1 : -1;
+      })
       : data;
   });
 
