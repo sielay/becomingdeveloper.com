@@ -1,5 +1,5 @@
 {% extends 'card.njk' %}
 {% block content %}
-{% set i = 0 %}{%- for post in collections.blog_flat -%}{% if (post | category('journal')) %}<a href="{{ post.url }}" title="{{ post.data.title }}" class="hover:underline text-sm truncate whitespace-no-wrap overflow-hidden block py-1 w-full h-8">{{ post.data.title }}</a>{% set i = i + 1 %}{% endif %}{%- endfor -%}
-<a href="/blog/category/journal" class="bg-orange-600 text-white block rounded-lg px-2 py-1 no-underline">More...</a>
+{% set i = 0 %}{%- for post in collections.blog_flat -%}{% if (post | category('journal')) and (i < 7) %}<a href="{{ post.url }}" title="{{ post.data.title }}" class="hover:underline text-sm truncate whitespace-no-wrap overflow-hidden block py-1 w-full h-8">{{ post.data.title }}</a>{% set i = i + 1 %}{% endif %}{%- endfor -%}
+<a href="/blog/category/journal" class="bg-orange-600 text-white block rounded-lg mt-2 px-2 py-1 no-underline">More...</a>
 {% endblock %}
