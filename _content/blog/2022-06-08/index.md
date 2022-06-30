@@ -6,7 +6,9 @@ author: sielay
 draft: false
 categories:
     - journal
-tags: []
+tags:
+    - learn to code
+    - first job
 ---
 
 There are many positions in the IT that don't require code. Many of them benefit from having that knowledge to grow further. You can join as a part of application support and grow to DevOps, or you can start as a manual QA and grow to SDET.

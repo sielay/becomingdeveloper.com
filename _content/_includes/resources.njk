@@ -1,10 +1,8 @@
 <div class="w-full lg:max-w-full lg:flex shadow-lg mb-5">
-    <div class="bg-white w-full rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-        <div class="mb-8">
-            {%- for tag in collections.blog_flat -%}
-                <a class="inline-block hover:bg-gray-200 rounded-lg px-1 py-1 text-gray-800 mr-1 mb-1 text-xs" title="Tag: {{ tag.data.title }}" href="{{ tag.url }}">{{ tag.data.title }}</a>
-            {%- endfor -%}
-        </div>
-    </div>
+<div class="bg-white w-full rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+<div class="mb-8">
+{% for tag in collections.blog_flat %}{% if (tag | category('journal') == false) %}<a class="inline-block hover:bg-gray-200 rounded-lg px-1 py-1 text-gray-800 mr-1 mb-1 text-xs" title="Tag: {{ tag.data.title }}" href="{{ tag.url }}">{{ tag.data.title }}</a>{% endif %}{% endfor %}
+</div>
+</div>
 </div>
 

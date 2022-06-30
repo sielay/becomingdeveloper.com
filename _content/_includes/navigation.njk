@@ -1,12 +1,12 @@
-<header class="fixed w-full z-10 top-0 shadow-2xl font-navigation bg-teal-300 text-gray-100">
-    <div class= "w-full md:max-w-4xl mx-auto flex items-center justify-between mt-0 py-3">
+<header class="fixed w-full z-10 top-0 shadow-2xl font-navigation" style="background-color: #B7FAFD; color: #2F4E66">
+    <div class= "w-full md:max-w-3xl mx-auto flex items-center justify-between mt-0 py-3">
         <div class="pl-4">
             <a href="/" class="text-base no-underline hover:no-underline font-extrabold text-lg lg:text-xl">
                  Should You Become a Software Developer?
             </a>
         </div>
         <div class="block lg:hidden pr-4">
-            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded hover:text-gray-200 hover:border-gray-200 appearance-none focus:outline-none" onClick="document.body.querySelector('#navlinks').classList.toggle('hidden')">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded hover:text-black hover:underline hover:border-black appearance-none focus:outline-none" onClick="document.body.querySelector('#navlinks').classList.toggle('hidden')">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
@@ -17,7 +17,7 @@
         {% include 'navlinks.njk' -%}  
         </div>  
     </div>
-    <div class="sidebar hidden lg:hidden pb-2" id="navlinks">
+    <div class="sidebar hidden lg:hidden pb-2 md:max-w-3xl items-center justify-between mx-auto pl-2" id="navlinks">
         {% include 'navlinks.njk' -%}    
     </div>
 </header>

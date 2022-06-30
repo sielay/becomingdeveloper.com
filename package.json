@@ -16,6 +16,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+    "@coreui/icons": "^3.0.0-alpha.0",
     "@mightyplow/eleventy-plugin-cache-buster": "^1.1.3",
     "autoprefixer": "^9.8.0",
     "axios": "^0.19.0",

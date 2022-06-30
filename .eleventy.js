@@ -60,8 +60,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_content/**/*.png");
   eleventyConfig.addPassthroughCopy("_content/**/*.svg");
   eleventyConfig.addPassthroughCopy({ "node_modules/flag-icons/flags": "flags" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/@coreui/icons/fonts": "fonts" });
   eleventyConfig.addFilter("data", (list, key) => {
     return key;
+  });
+  eleventyConfig.addFilter('category', (post, category) => {
+    return post?.data?.categories?.includes(category) || false;
   });
 
   // filters

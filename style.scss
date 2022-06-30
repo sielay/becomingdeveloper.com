@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Montserrat:wght@400&display=swap");
 @import "./node_modules/prismjs/themes/prism-okaidia.css";
 @import "./node_modules/flag-icons/sass/flag-icons.scss";
+@import "./node_modules/@coreui/icons/scss/brand.scss";
 
 @tailwind base;
 @tailwind utilities;
+
+p a, p a:active, p a:link, p a:visited {
+  text-decoration: none !important;
+}
 
 h1,
 h2,
@@ -95,10 +100,13 @@ p {
     }
   }
 
-  p {
+  p, ul {
     max-width: 30rem;
     margin: auto;
     padding: 1rem 0 0;
+  }
+  ul {
+    max-width: 28rem;
   }
 }
 
