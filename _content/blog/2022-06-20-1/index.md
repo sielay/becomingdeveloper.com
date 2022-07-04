@@ -1,22 +1,22 @@
 ---
-title: Remote work vs Salaries
+title: You are your own biggest obstacle
 createdDate: '2022-06-20'
 date: '2022-06-20'
 author: sielay
 draft: false
 categories:
     - journal
-    - response
+    - q & a 
 tags:
-    - career
-    - salary
-    - wages
-    - remote work
-    - hybrid work
+    - learn to code
+    - motivation
+    - learning
+    - self disciplines
 ---
 
- * People expected remote work to lower wages
- * Small locations have to compete with large cities now
- * Remote work caused wages to grow
+ * Most poeple don't start
+ * Most people who start - succeed
+ * Eantry cost is low
+ * Just start
 
-<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@shouldyoubecome/video/7111344839052020997" data-video-id="7111344839052020997" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@shouldyoubecome" href="https://www.tiktok.com/@shouldyoubecome">@shouldyoubecome</a> <a title="stitch" target="_blank" href="https://www.tiktok.com/tag/stitch">#stitch</a> with @recruitwithdave <a title="salaries" target="_blank" href="https://www.tiktok.com/tag/salaries">#salaries</a> <a title="remote" target="_blank" href="https://www.tiktok.com/tag/remote">#remote</a> <a title="work" target="_blank" href="https://www.tiktok.com/tag/work">#work</a> <a title="wages" target="_blank" href="https://www.tiktok.com/tag/wages">#wages</a> <a title="software" target="_blank" href="https://www.tiktok.com/tag/software">#software</a> <a target="_blank" title="♬ original sound - Should you Become a Developer" href="https://www.tiktok.com/music/original-sound-7111344841581447941">♬ original sound - Should you Become a Developer</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@shouldyoubecome/video/7111342539231284485" data-video-id="7111342539231284485" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@shouldyoubecome" href="https://www.tiktok.com/@shouldyoubecome">@shouldyoubecome</a> Reply to @diegop0498 <a title="learntocode" target="_blank" href="https://www.tiktok.com/tag/learntocode">#learntocode</a> <a title="justdoit" target="_blank" href="https://www.tiktok.com/tag/justdoit">#justdoit</a> <a title="100dayscodingchallenge" target="_blank" href="https://www.tiktok.com/tag/100dayscodingchallenge">#100dayscodingchallenge</a> <a target="_blank" title="♬ original sound - Should you Become a Developer" href="https://www.tiktok.com/music/original-sound-7111342573293144838">♬ original sound - Should you Become a Developer</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>

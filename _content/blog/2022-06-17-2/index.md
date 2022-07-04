@@ -1,21 +1,24 @@
 ---
-title: Azure vs AWS
+title: Are bootstraps worth the money?
 createdDate: '2022-06-17'
 date: '2022-06-17'
 author: sielay
 draft: false
 categories:
     - journal
-    - q & a
 tags:
-    - azure
-    - no-code
-    - low-cod
-    - aws
-    - devops
+    - learn to code
+    - career
+    - bootstrap
+    - course
+    - training
+    - tutorial
+
 ---
 
- * Azure - corporate first, user first, more low and no-code
- * AWS - developer first, middle and smaller organisations, more technical, more devops
+ * Check grauates
+ * Check promisses and gauarantees
+ * Check the curriculum and ask mentors about it
+ * Check if content matches job offers in your area
 
-<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@shouldyoubecome/video/7110201942504131845" data-video-id="7110201942504131845" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@shouldyoubecome" href="https://www.tiktok.com/@shouldyoubecome">@shouldyoubecome</a> Reply to @sunnyali063 is <a title="aws" target="_blank" href="https://www.tiktok.com/tag/aws">#aws</a> <a title="cloud" target="_blank" href="https://www.tiktok.com/tag/cloud">#cloud</a> worth a try <a title="learntocode" target="_blank" href="https://www.tiktok.com/tag/learntocode">#learntocode</a> <a title="nocode" target="_blank" href="https://www.tiktok.com/tag/nocode">#nocode</a> <a title="lowcode" target="_blank" href="https://www.tiktok.com/tag/lowcode">#lowcode</a> <a title="firstjob" target="_blank" href="https://www.tiktok.com/tag/firstjob">#firstjob</a> <a title="certification" target="_blank" href="https://www.tiktok.com/tag/certification">#certification</a> <a title="certificate" target="_blank" href="https://www.tiktok.com/tag/certificate">#certificate</a> <a target="_blank" title="♬ Originalton - Anna Staud" href="https://www.tiktok.com/music/Originalton-6905830207396104962">♬ Originalton - Anna Staud</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@shouldyoubecome/video/7110192748635966726" data-video-id="7110192748635966726" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@shouldyoubecome" href="https://www.tiktok.com/@shouldyoubecome">@shouldyoubecome</a> are bootcamps a scam? <a title="bootcamp" target="_blank" href="https://www.tiktok.com/tag/bootcamp">#bootcamp</a> <a title="learntocode" target="_blank" href="https://www.tiktok.com/tag/learntocode">#learntocode</a> <a title="findjob" target="_blank" href="https://www.tiktok.com/tag/findjob">#findjob</a> <a title="workinit" target="_blank" href="https://www.tiktok.com/tag/workinit">#workinit</a> <a title="100daysofcode" target="_blank" href="https://www.tiktok.com/tag/100daysofcode">#100daysofcode</a> <a title="pov" target="_blank" href="https://www.tiktok.com/tag/pov">#pov</a> <a target="_blank" title="♬ London Scammer - Tankz" href="https://www.tiktok.com/music/London-Scammer-6828255888835348482">♬ London Scammer - Tankz</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
