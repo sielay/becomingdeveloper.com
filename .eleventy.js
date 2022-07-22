@@ -108,7 +108,7 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "njk",
     writeTagsToCollections: "shags",
     dir: {
-      input: "./_content",
+      input: "./_content"
     },
   };
 };
