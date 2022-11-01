@@ -1,5 +1,7 @@
 <div class="bg-indigo-900 text-center py-4 lg:px-4 fixed w-full bottom-0 z-20 mt-12 hidden px-3" id="cookie-consent">
-  <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex flex-wrap" role="alert">
+  <div
+    class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex flex-wrap"
+    role="alert">
     <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3 mb-2 lg:mb-0">Mind Cookies?</span>
     <span class="font-semibold mr-2 text-left flex-auto mb-2 lg:mb-0">I need them for Disqus comments and Google Analytics.</span>
     <button id="enable-cookies" class="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">OK</span>
@@ -7,53 +9,74 @@
   </div>
 </div>
 <script>
-  (function(a,b,c){b=document,c='addEventListener';b[c]?b[c]('DOMContentLoaded',a):window.attachEvent('onload',a)})(function() {
+  (function (a, b, c) {
+    b = document,
+    c = 'addEventListener';
+    b[c]
+      ? b[c]('DOMContentLoaded', a)
+      : window.attachEvent('onload', a)
+  })(function () {
     var consent = document.getElementById('cookie-consent');
     var enable = document.getElementById('enable-cookies');
     var disable = document.getElementById('disable-cookies');
-
     var cookie = document.cookie.match(/(^|;\s*)(CookieConsent=)(true|false)/);
     var mode = document.cookie.match(/(^|;\s*)(Theme=)(dark|light)/);
     mode = mode && mode[3] || 'dark';
-
     function setCookie(name, value, days) {
       var d = new Date;
-      d.setTime(d.getTime() + 24*60*60*1000*days);
+      d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
       document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
     }
-    if (!cookie) {
+    if (! cookie) {
       consent.style.display = 'block';
-      enable.addEventListener('click', function() {        
+      enable.addEventListener('click', function () {
         consent.style.display = 'none';
         setCookie('CookieConsent', 'true');
         document.location.reload(true);
       });
-      disable.addEventListener('click', function() {        
+      disable.addEventListener('click', function () {
         document.location.href = 'https://google.com';
       });
     } else {
       document.cookieConsent = cookie[3] === 'true';
     }
-
     // GA
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
     gtag('config', 'G-EEVDEP71P8');
-
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EEVDEP71P8';
-    (d.head || d.body).appendChild(s);
-    })();
-
-    if (document.getElementById('disqus_thread')) {
-      // Disqus
-      (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://becoming-a-software-developer.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EEVDEP71P8';
       (d.head || d.body).appendChild(s);
+    })();
+    if (document.getElementById('disqus_thread')) { // Disqus
+      (function () {
+        var d = document,
+          s = d.createElement('script');
+        s.src = 'https://becoming-a-software-developer.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    }
+    if (document.querySelector('[data-shouldyou]')) { // Chat
+      window.youshould = {
+        apiHost: 'api.shouldyou.co',
+        apiPort: 443
+      };
+      (function () {
+        var d = document,
+          s = d.createElement('script'),
+          c = d.createElement('link');
+        s.src = 'https://widget.shouldyou.co/static/js/main.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+        c.setAttribute('rel', 'stylesheet');
+        c.setAttribute('href', 'https://widget.shouldyou.co/static/css/main.css');
+        d.head.appendChild(c);
       })();
     }
   });
