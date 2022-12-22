@@ -6,7 +6,7 @@ const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
 exports.handler = (event, context, callback) => {
   try {
     const {
-      payload: { email },
+      payload: { email, message },
     } = JSON.parse(event.body);
 
     if (!email) {
@@ -42,7 +42,9 @@ exports.handler = (event, context, callback) => {
     const data = {
       email_address: email,
       status: "pending",
-      merge_fields: {},
+      merge_fields: {
+         MESSAGE: String(message)
+      },
     };
 
     const subscriber = JSON.stringify(data);
