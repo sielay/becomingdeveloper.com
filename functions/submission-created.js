@@ -8,6 +8,8 @@ exports.handler = (event, context, callback) => {
     const {
       payload: { email, message },
     } = JSON.parse(event.body);
+    
+    console.log('Input from the form', email, message);
 
     if (!email) {
       console.log("missing email");
