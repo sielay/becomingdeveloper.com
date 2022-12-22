@@ -58,8 +58,8 @@ exports.handler = (event, context, callback) => {
     console.log('MAILCHIMP', mailChimpAPI, mailChimpListID);
 
     const mailJet = new MailJet({
-      mailJetAPI,
-      mailJetSecret,
+      apiKey: mailJetAPI,
+      apiSecret: mailJetSecret,
     });
 
     Promise.all([
