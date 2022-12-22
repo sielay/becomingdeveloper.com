@@ -46,6 +46,7 @@
     "safe-json-stringify": "^1.2.0",
     "slugify": "^1.4.0",
     "string-strip-html": "^7.0.3",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "node-mailjet": "^5.1.1"
   }
 }
