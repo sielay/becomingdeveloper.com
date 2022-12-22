@@ -5,7 +5,8 @@ const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
 
 exports.handler = (event, context, callback) => {
   try {
-    console.log('What comes', JSON.stringify(event, null, 2));
+    console.log('Hi!');
+    console.log('What comes', JSON.stringify(event.body, null, 2));
     const {
       payload: { email, message },
     } = JSON.parse(event.body);
