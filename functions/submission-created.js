@@ -54,6 +54,9 @@ exports.handler = (event, context, callback) => {
 
     const subscriber = JSON.stringify(data);
 
+    console.log('MAILJET', mailJetAPI, mailJetSecret);
+    console.log('MAILCHIMP', mailChimpAPI, mailChimpListID);
+
     const mailJet = new MailJet({
       mailJetAPI,
       mailJetSecret,
