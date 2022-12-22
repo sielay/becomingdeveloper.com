@@ -6,10 +6,10 @@ const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
 exports.handler = (event, context, callback) => {
   try {
     const {
-      payload: { data: { email, message } } ,
+      payload: { data: { email, message, name } } ,
     } = JSON.parse(event.body);
     
-    console.log('Input from the form', email, message);
+    console.log('Input from the form', email, message, name);
 
     if (!email) {
       console.log("missing email");
@@ -45,7 +45,8 @@ exports.handler = (event, context, callback) => {
       email_address: email,
       status: "pending",
       merge_fields: {
-         MESSAGE: String(message)
+         MESSAGE: String(message),
+         NAME: String(name)
       },
     };
 
