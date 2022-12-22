@@ -1,7 +1,10 @@
 const { parse } = require("querystring");
 const axios = require("axios");
+const MailJet = require("node-mailjet");
 const mailChimpAPI = process.env.MAILCHIMP_API_KEY;
 const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
+const mailJetAPI = process.env.MAILJET_KEY;
+const mailJetSecret = process.env.MAILJET_SECRET;
 
 exports.handler = (event, context, callback) => {
   try {
@@ -54,6 +57,35 @@ exports.handler = (event, context, callback) => {
     console.log("Sending data to mailchimp", subscriber);
 
     // Subscribe an email
+    
+    const mailJet = new MailJet({
+      mailJetAPI,
+      mailJetSecret,
+    });
+    
+    try {
+      mailJet
+        .post("send", { version: "v3.1" })
+        .request({
+          Messages: [
+            {
+              From: {
+                Email: 'support@shouldyou.co",
+                Name: 'Form submission',
+              },
+              To: [
+                {
+                  Email: 'lukaszsielski@gmail.com',
+                },
+              ],
+              Subject: "Form Submission",
+              TextPart: `User ${name} ${email} submitted the enquiry: ${message}`						  
+            }
+          ]
+        });    
+    } catch (error) {
+      console.error(error);
+    }
 
     axios({
       method: "post",
