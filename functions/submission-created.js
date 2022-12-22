@@ -1,4 +1,3 @@
-const { parse } = require("querystring");
 const axios = require("axios");
 const MailJet = require("node-mailjet");
 const mailChimpAPI = process.env.MAILCHIMP_API_KEY;
