@@ -55,15 +55,14 @@ exports.handler = (event, context, callback) => {
 
     const subscriber = JSON.stringify(data);
     console.log("Sending data to mailchimp", subscriber);
+    console.log("Secrets", mailJetAPI, mailJetSecret);
 
-    // Subscribe an email
-    
-    const mailJet = new MailJet({
-      mailJetAPI,
-      mailJetSecret,
-    });
-    
+    // Subscribe an email    
     try {
+      const mailJet = new MailJet({
+        mailJetAPI,
+        mailJetSecret,
+      });
       mailJet
         .post("send", { version: "v3.1" })
         .request({
