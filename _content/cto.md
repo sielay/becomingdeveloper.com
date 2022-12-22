@@ -49,8 +49,7 @@ image: cover.png
           I restrict right to not answer to your enquiry. The answer can be limited and simpler than from a paid advise. You are responsible for applying and analysing my suggestion.
           <br/>
           I will send information about the book and new materials. I won't sell the addresses to the third party nor send each update to this blog.
-          By submitting this form you agree to receive emails from me. You will be able to unsubscribe.
-          
+          By submitting this form you agree to receive emails from me. You will be able to unsubscribe.          
         </p>
       </div>      
     </div>
