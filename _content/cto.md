@@ -3,12 +3,13 @@ title: Should You Become a Software Developer?
 topNav: false
 image: cover.png
 ---
-<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-   <div class="w-full lg:max-w-full lg:flex shadow-lg mb-5">
-      <div class="bg-white w-full rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-          <div class="mb-2">
-              Your Virtual CTO
-          </div>
+
+<div class="w-full lg:max-w-full lg:flex shadow-lg mb-5">
+   <div class="bg-white w-full rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+       <div class="mb-2">
+           Your Virtual CTO
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
           <form method="POST" name="submitter" data-netlify="true" netlify-honeypot="bot-field" action="/subscribed">
             <input type="hidden" name="form-name" value="submitter"/>
             <div class="hidden" aria-hidden="true">
@@ -34,16 +35,13 @@ image: cover.png
             </div>
             <div data-netlify-recaptcha="true"></div>
           </form>
-          <p class="text-xs text-gray-600">
-            If you provide information on your challanges in the form I will try to come back to you with an advice free of charge. That may be high level
-            architecture proposal, technical approach or learning path. Your query after being anonymised used to train an algorithm meant to provide similar
-            help to others.<br/>
-            I will send information about the book and new materials. I won't sell the addresses to the third party nor send each update to this blog.    
-          </p>
-        </div>
+      </div>
+       <p class="text-xs text-gray-600">
+         If you provide information on your challanges in the form I will try to come back to you with an advice free of charge. That may be high level
+         architecture proposal, technical approach or learning path. Your query after being anonymised used to train an algorithm meant to provide similar
+         help to others.<br/>
+         I will send information about the book and new materials. I won't sell the addresses to the third party nor send each update to this blog.    
+       </p>
      </div>
   </div>
-  {%- include 'chat.njk' -%}
-  {%- include 'resources.njk' -%}
-  <div className="w-full h-12">AAAA</div>
 </div>
