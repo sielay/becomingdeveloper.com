@@ -45,9 +45,9 @@ image: cover.png
         <p class="text-xs text-gray-600">
           If you provide information on your challanges in the form I will try to come back to you with an advice free of charge. That may be high level
           architecture proposal, technical approach or learning path. Your query after being anonymised used to train an algorithm meant to provide similar
-          help to others.<br/>
+          help to others.<br/><br/>
           I restrict right to not answer to your enquiry. The answer can be limited and simpler than from a paid advise. You are responsible for applying and analysing my suggestion.
-          <br/>
+          <br/><br/>
           I will send information about the book and new materials. I won't sell the addresses to the third party nor send each update to this blog.
           By submitting this form you agree to receive emails from me. You will be able to unsubscribe.          
         </p>
