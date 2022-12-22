@@ -9,9 +9,9 @@ const mailJetSecret = process.env.MAILJET_SECRET;
 exports.handler = (event, context, callback) => {
   try {
     const {
-      payload: { data: { email, message, name } } ,
+      payload: { data: { email, message, name } },
     } = JSON.parse(event.body);
-    
+
     console.log('Input from the form', email, message, name);
 
     if (!email) {
@@ -48,8 +48,8 @@ exports.handler = (event, context, callback) => {
       email_address: email,
       status: "pending",
       merge_fields: {
-         MESSAGE: String(message),
-         NAME: String(name)
+        MESSAGE: String(message),
+        NAME: String(name)
       },
     };
 
@@ -57,44 +57,42 @@ exports.handler = (event, context, callback) => {
     console.log("Sending data to mailchimp", subscriber);
     console.log("Secrets", mailJetAPI, mailJetSecret);
 
-    // Subscribe an email    
-    try {
-      const mailJet = new MailJet({
-        mailJetAPI,
-        mailJetSecret,
-      });
-      mailJet
-        .post("send", { version: "v3.1" })
-        .request({
-          Messages: [
-            {
-              From: {
-                Email: 'support@shouldyou.co',
-                Name: 'Form submission',
-              },
-              To: [
-                {
-                  Email: 'lukaszsielski@gmail.com',
+    Promise.all([
+      function () {
+        const mailJet = new MailJet({
+          mailJetAPI,
+          mailJetSecret,
+        });
+        return mailJet
+          .post("send", { version: "v3.1" })
+          .request({
+            Messages: [
+              {
+                From: {
+                  Email: 'support@shouldyou.co',
+                  Name: 'Form submission',
                 },
-              ],
-              Subject: "Form Submission",
-              TextPart: `User ${name} ${email} submitted the enquiry: ${message}`						  
-            }
-          ]
-        });    
-    } catch (error) {
-      console.error(error);
-    }
-
-    axios({
-      method: "post",
-      url: `https://us7.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`, //change region (us19) based on last values of ListId.
-      data: subscriber,
-      auth: {
-        username: "apikey", // any value will work
-        password: mailChimpAPI,
-      },
-    })
+                To: [
+                  {
+                    Email: 'lukaszsielski@gmail.com',
+                  },
+                ],
+                Subject: "Form Submission",
+                TextPart: `User ${name} ${email} submitted the enquiry: ${message}`
+              }
+            ]
+          });
+      }, function () {
+        return axios({
+          method: "post",
+          url: `https://us7.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`, //change region (us19) based on last values of ListId.
+          data: subscriber,
+          auth: {
+            username: "apikey", // any value will work
+            password: mailChimpAPI,
+          },
+        });
+      }])
       .then(function (response) {
         console.log(`status:${response.status}`);
         console.log(`data:${response.data}`);
@@ -136,6 +134,10 @@ exports.handler = (event, context, callback) => {
           console.log("Error", error.message);
         }
         console.log(error.config);
+        return callback(null, {
+          statusCode: 500,
+          body: JSON.stringify(error.message),
+        });
       });
   } catch (error) {
     console.log(error);
