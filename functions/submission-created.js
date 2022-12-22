@@ -53,11 +53,9 @@ exports.handler = (event, context, callback) => {
     };
 
     const subscriber = JSON.stringify(data);
-    console.log("Sending data to mailchimp", subscriber);
-    console.log("Secrets", mailJetAPI, mailJetSecret);
 
     Promise.all([
-      function () {
+      (function () {
         const mailJet = new MailJet({
           mailJetAPI,
           mailJetSecret,
@@ -81,20 +79,19 @@ exports.handler = (event, context, callback) => {
               }
             ]
           });
-      }, function () {
-        return axios({
-          method: "post",
-          url: `https://us7.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`, //change region (us19) based on last values of ListId.
-          data: subscriber,
-          auth: {
-            username: "apikey", // any value will work
-            password: mailChimpAPI,
-          },
-        });
-      }])
+      })(), axios({
+        method: "post",
+        url: `https://us7.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`, //change region (us19) based on last values of ListId.
+        data: subscriber,
+        auth: {
+          username: "apikey", // any value will work
+          password: mailChimpAPI,
+        },
+      })
+    ])
       .then(function (response) {
         console.log(response);
-          // Do redirect for non JS enabled browsers
+        // Do redirect for non JS enabled browsers
         return callback(null, {
           statusCode: 302,
           headers: {
