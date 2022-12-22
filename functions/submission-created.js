@@ -54,32 +54,32 @@ exports.handler = (event, context, callback) => {
 
     const subscriber = JSON.stringify(data);
 
+    const mailJet = new MailJet({
+      mailJetAPI,
+      mailJetSecret,
+    });
+
     Promise.all([
-      (function () {
-        const mailJet = new MailJet({
-          mailJetAPI,
-          mailJetSecret,
-        });
-        return mailJet
-          .post("send", { version: "v3.1" })
-          .request({
-            Messages: [
-              {
-                From: {
-                  Email: 'support@shouldyou.co',
-                  Name: 'Form submission',
+      mailJet
+        .post("send", { version: "v3.1" })
+        .request({
+          Messages: [
+            {
+              From: {
+                Email: 'support@shouldyou.co',
+                Name: 'Form submission',
+              },
+              To: [
+                {
+                  Email: 'lukaszsielski@gmail.com',
                 },
-                To: [
-                  {
-                    Email: 'lukaszsielski@gmail.com',
-                  },
-                ],
-                Subject: "Form Submission",
-                TextPart: `User ${name} ${email} submitted the enquiry: ${message}`
-              }
-            ]
-          });
-      })(), axios({
+              ],
+              Subject: "Form Submission",
+              TextPart: `User ${name} ${email} submitted the enquiry: ${message}`
+            }
+          ]
+        })
+      , axios({
         method: "post",
         url: `https://us7.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`, //change region (us19) based on last values of ListId.
         data: subscriber,
