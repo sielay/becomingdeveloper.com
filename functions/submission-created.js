@@ -70,7 +70,7 @@ exports.handler = (event, context, callback) => {
           Messages: [
             {
               From: {
-                Email: 'support@shouldyou.co",
+                Email: 'support@shouldyou.co',
                 Name: 'Form submission',
               },
               To: [
