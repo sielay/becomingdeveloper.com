@@ -10,7 +10,6 @@ image: cover.png
     {%- include 'latest.njk' -%}
 </div>
 {%- include 'author.njk' -%}
-{%- include 'chat.njk' -%}
 {%- include 'resources.njk' -%}
 <div className="w-full h-12"></div>
 </div>
